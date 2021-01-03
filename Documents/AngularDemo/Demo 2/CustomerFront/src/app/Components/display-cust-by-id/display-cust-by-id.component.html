@@ -1,0 +1,34 @@
+<p>display-cust-by-id works!</p>
+<div class = "container">
+    <div class="d-flex justify-content-center">
+        <h4>Cusomer Details</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{customer.custId}}: {{customer.custName | uppercase}}</h5>
+
+                    <hr/>
+                    <div>
+                        <p class="card-text">Name: {{customer.custName}}</p>
+                        <hr/>
+                        <p class="card-text">Email: {{customer.custEmail}}</p>
+                        <hr/>
+                        <p class="card-text">Address: {{customer.custAddr}}</p>
+                        <hr/>
+                        <p class="card-text">Password: {{customer.password}}</p>
+                        <hr/>
+                    </div>
+
+                    <hr/>
+                    <div>
+                        <!-- <a routerLink="/display-cust-by-id/{{customer.custId}}" class="card-link">View</a> -->
+                        <a routerLink="/edit-cust/{{customer.custId}}" class="card-link">Edit</a>
+                        <a routerLink="/delete-cust/{{customer.custId}}" class="card-link">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
